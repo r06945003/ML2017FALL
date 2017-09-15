@@ -13,7 +13,7 @@ for m in range(x):
         g = RGB[1] // 2
         b = RGB[2] // 2
         im.putpixel((m,n), (r, g, b))
-im.save("Q2.jpg")
+im.save("Q2.png")
 #im2 = Image.open('Q2.jpg')
 #two = numpy.array(im)
 #print (two[0])
