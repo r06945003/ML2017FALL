@@ -2,13 +2,16 @@ import numpy as np
 from numpy.linalg import svd, eig
 from skimage import io
 import sys
+import os
 
 X = []
-for i in range(415):
-    img = io.imread(sys.argv[1] + '/' + str(i) + '.jpg')
+file_pos = []
+for file in os.listdir(sys.argv[1]):
+    img = io.imread(sys.argv[1] + '/' + file)
     #img.shape
     img = img.flatten()
     X.append(img)
+    file_pos.append(file)
 X = np.array(X)
 
 X_mean = np.mean(X, axis=0)
@@ -21,7 +24,7 @@ X_mean = np.mean(X, axis=0)
 X = X - X_mean
 X = X.T
 #print(X.shape)
-y = X[:,int(sys.argv[2].split('.jpg')[0])]  #which image to reconstruct
+y = X[:,file_pos.index(sys.argv[2])]  #which image to reconstruct
 #print(y.shape)
 
 U, s, V = np.linalg.svd(X, full_matrices=False)
