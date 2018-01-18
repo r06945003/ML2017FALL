@@ -10,28 +10,27 @@ Requirements:
     - Python 3
     - gensim
     - keras
-	- tensorflow
-	- scikit-learn
+    - tensorflow
+    - scikit-learn
     - pandas
-	- numpy
+    - numpy
 
 Files:
     All required files should be named as follows and be in the same folder as scripts:
-	- train.data
+    - train.data
     - train.caption
-	- test.data
+    - test.data
     - test.csv
-	- model.h5
+    - model.h5
 
 Descriptions of scripts:
     - model.py:
         - Execution:
-			python3 model.py train.data test.data train.caption test.csv predict_path
-		- Output:
-			Generate a keras model file (model.h5) and write the prediction to the file (predict_path.csv) at the end.
-	
-	- reproduce.py:
+		python3 model.py train.data test.data train.caption test.csv predict_path
+	- Output:
+		Generate a keras model file (model.h5) and write the prediction to the file (predict_path.csv) at the end.
+    - reproduce.py:
         - Execution:
-			python3 reproduce.py model.h5 predict_path
-		- Output:
-			Write the prediction to the file (predict_path.csv) at the end by loading the pretrained model.
+		python3 reproduce.py model.h5 predict_path
+	- Output:
+		Write the prediction to the file (predict_path.csv) at the end by loading the pretrained model.
