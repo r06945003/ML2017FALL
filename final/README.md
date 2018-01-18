@@ -10,10 +10,10 @@ Requirements:
     - Python 3
     - gensim
     - keras
-	- tensorflow
-	- scikit-learn
+    - tensorflow
+    - scikit-learn
     - pandas
-	- numpy
+    - numpy
 
 Files:
     All required files should be named as follows and be in the same folder as scripts:
